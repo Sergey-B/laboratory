@@ -10,7 +10,6 @@ public class BoundedStackTests
         var stack = new BoundedStack<int>();
 
         // Assert
-        // stack.GetMaxSize().Should.Be(32);
         var expected = 32;
         var actual = stack.GetMaxSize();
 
