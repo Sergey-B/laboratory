@@ -1,5 +1,3 @@
-using Xunit.Sdk;
-
 namespace Task3;
 
 public abstract class ParentListAtd<T>
