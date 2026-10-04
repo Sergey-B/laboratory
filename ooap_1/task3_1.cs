@@ -346,10 +346,11 @@ public abstract class ParentListAtd<T>
         if (result == null)
         {
             _findStatus = FindErr;
+
             return;
         }
 
-        _current = result;
+        _current = result!;
         _findStatus = FindOk;
 
         return;

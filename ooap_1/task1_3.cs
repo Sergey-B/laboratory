@@ -84,7 +84,7 @@ public class BoundedStackTests
         Assert.Equal(BoundedStack<int>.PeekNil, stack.GetPeekStatus());
 
         var peek1 = stack.Peek();
-        Assert.Equal(peek1, default(int));
+        Assert.Equal(default(int), peek1);
         Assert.Equal(0, stack.Size());
         Assert.Equal(BoundedStack<int>.PeekErr, stack.GetPeekStatus());
 
@@ -92,7 +92,7 @@ public class BoundedStackTests
         stack.Push(1);
         
         var peek2 = stack.Peek();
-        Assert.Equal(peek2, 1);
+        Assert.Equal(1, peek2);
         Assert.Equal(1, stack.Size());
         Assert.Equal(BoundedStack<int>.PeekOk, stack.GetPeekStatus());
     }

@@ -86,7 +86,6 @@ public class DynArray<T> : DynArrayAtd<T>
     private int _size;
 
     public DynArray() : base(DefaultCapacity)
-
     {
         _addStatus = AddNil;
         _getStatus = GetNil;
@@ -109,7 +108,7 @@ public class DynArray<T> : DynArrayAtd<T>
             MakeArray(newCapacity);
         }
 
-        array[index] = item;
+        array[index] = item; // O(1)
         _size += 1;
 
         _addStatus = AddOk;
@@ -124,7 +123,7 @@ public class DynArray<T> : DynArrayAtd<T>
             return default;
         }
 
-        var item = array[index];
+        var item = array[index]; // O(1)
         _getStatus = GetOk;
 
         return item;
