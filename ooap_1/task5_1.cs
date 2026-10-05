@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace Task5;
 
+// задание 5
+// задача 1. Спроектировать АТД Queue и выполните её реализацию.
+// задача 2. Оцените меру сложности для операций enqueue() (добавление) и dequeue() (удаление) в данной реализации.
+// Push - сложность O(n), Pop - сложность O(1)
 public abstract class QueueAtd<T>
 {
     public const int PopNil = 0;
@@ -50,7 +54,6 @@ public class Queue<T> : QueueAtd<T>
 
     public override T? Pop()
     {
-        Console.WriteLine($"_queue.Count: {_queue.Count}");
         if (Size() == 0)
         {
             _popStatus = PopErr;
