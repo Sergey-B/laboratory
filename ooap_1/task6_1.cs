@@ -16,12 +16,11 @@ public abstract class ParentQueueAtd<T>
     // статусы
     protected int _addTailStatus;
     protected int _removeFrontStatus;
-    protected T[] _queue;
+    protected T?[] _queue;
     protected int _head; // указатель на начало очереди
     protected int _size; // текущее количество элементов в очереди
     protected int _capacity; // максимальное количество элементов в очереди
     protected const int DefaultCapacity = 10;
-
 
     // конструктор
     // постусловие: создана новая пустая очередь

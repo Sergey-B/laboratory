@@ -371,6 +371,10 @@ public abstract class ParentListAtd<T>
     public bool IsValue()
     {
         var getValue = Get();
+        if (getValue is null)
+        {
+            return false;
+        }
 
         return !getValue.Equals(default) && GetGetStatus() == GetOk;
     }
