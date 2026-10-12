@@ -1,5 +1,3 @@
-using System.Security.Authentication.ExtendedProtection;
-
 namespace Task7;
 
 public abstract class HashTableAtd
