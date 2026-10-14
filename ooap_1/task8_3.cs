@@ -32,11 +32,11 @@ public class NativeDictionaryTests
         // Arrange
         // Act
         _nativeDictionary.Put("key", "value");
-        var PutStatus = _nativeDictionary.GetPutStatus();
+        var putStatus = _nativeDictionary.GetPutStatus();
 
         // Assert
         Assert.Equal(1, _nativeDictionary.Count());
-        Assert.Equal(NativeDictionaryAtd<string>.PutOk, PutStatus);
+        Assert.Equal(NativeDictionaryAtd<string>.PutOk, putStatus);
     }
 
     [Fact]
@@ -47,11 +47,11 @@ public class NativeDictionaryTests
 
         // Act
         nativeDictionary.Put("key", "value");
-        var PutStatus = nativeDictionary.GetPutStatus();
+        var putStatus = nativeDictionary.GetPutStatus();
 
         // Assert
         Assert.Equal(1, nativeDictionary.Count());
-        Assert.Equal(NativeDictionaryAtd<string>.PutOk, PutStatus);
+        Assert.Equal(NativeDictionaryAtd<string>.PutOk, putStatus);
     }
 
     [Fact]
@@ -62,11 +62,11 @@ public class NativeDictionaryTests
 
         // Act
         nativeDictionary.Put("key", "value");
-        var PutStatus = nativeDictionary.GetPutStatus();
+        var putStatus = nativeDictionary.GetPutStatus();
 
         // Assert
         Assert.Equal(1, nativeDictionary.Count());
-        Assert.Equal(NativeDictionaryAtd<string>.PutOk, PutStatus);
+        Assert.Equal(NativeDictionaryAtd<string>.PutOk, putStatus);
     }
 
     [Fact]
@@ -84,42 +84,6 @@ public class NativeDictionaryTests
         Assert.Equal(1, _nativeDictionary.Count());
         Assert.Equal(NativeDictionaryAtd<string>.PutOk, putStatus);
     }
-
-    // [Fact]
-    // public void RemoveShouldRemoveElementByGivenKey()
-    // {
-    //     // Arrange
-    //     _nativeDictionary.Put("key", "value");
-
-    //     var resultBeforeRemoval = _nativeDictionary.Exists("key");
-
-    //     // Act
-    //     _nativeDictionary.Remove("key");
-    //     var removeStatus = _nativeDictionary.GetRemoveStatus();
-    //     var resultAfterRemoval = _nativeDictionary.Exists("key");
-
-    //     // Assert
-    //     Assert.True(resultBeforeRemoval);
-    //     Assert.Equal(NativeDictionaryAtd.RemoveOk, removeStatus);
-    //     Assert.False(resultAfterRemoval);
-    // }
-
-    // [Fact]
-    // public void RemoveShouldReturnErrorIfElementWithGivenValueNotExists()
-    // {
-    //     // Arrange
-    //     var resultBeforeRemoval = _nativeDictionary.Exists("first");
-
-    //     // Act
-    //     _nativeDictionary.Remove("first");
-    //     var removeStatus = _nativeDictionary.GetRemoveStatus();
-    //     var resultAfterRemoval = _nativeDictionary.Exists("first");
-
-    //     // Assert
-    //     Assert.False(resultBeforeRemoval);
-    //     Assert.Equal(NativeDictionaryAtd.RemoveErr, removeStatus);
-    //     Assert.False(resultAfterRemoval);
-    // }
 
     [Fact]
     public void HasKeyShouldReturnTrueIfGivenKeyExists()
