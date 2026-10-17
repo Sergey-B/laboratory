@@ -184,16 +184,6 @@ public abstract class PowerSetAtd<T> : HashTableAtd<T>
     {
     }
 
-    public PowerSetAtd<T> Build(PowerSetAtd<T> set)
-    {
-        foreach (var item in set)
-        {
-            Put(item);
-        }
-
-        return this;
-    }
-
     // команды
     // предусловие: текущее множество не пустое и set2 не пустое;
     // постусловие: возвращает обьединение текущего множества с элементами из множества set2;
@@ -257,13 +247,11 @@ public class PowerSet<T> : PowerSetAtd<T>
 
         foreach (var item in sourceSet)
         {
-            Console.WriteLine($"Item: {item}");
             result.Put(item);
         }
 
         foreach (var item in targetSet)
         {
-            Console.WriteLine($"Item: {item}");
             if (!result.Get(item))
             {
                result.Put(item);
