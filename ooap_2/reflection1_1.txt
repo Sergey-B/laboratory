@@ -1,0 +1,9 @@
+В примере используется наследование, композиция и полиморфизм.
+
+- Класс Order использует композицию так как содержит поле Items типа IEnumerable<OrderItem> и создает Items.
+
+- Класс Delivery использует аггрегацию и содержит внутри поля User и Order.
+
+Классы PriorityDelivery и StandardDelivery наследуют классу Delivery. 
+Также в этой иерархии классов реализован полиморфизм подтипов, 
+классы PriorityDelivery и StandardDelivery переопределяют родительский метод GetStatus.
